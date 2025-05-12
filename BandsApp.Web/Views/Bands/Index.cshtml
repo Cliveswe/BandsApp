@@ -1,0 +1,27 @@
+﻿@model BandsApp.Web.Models.Band[]
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link type="text/css" rel="stylesheet" href="https://unpkg.com/@@picocss/pico@@latest/css/pico.classless.min.css"/>
+    <title>Bands</title>  
+</head>
+
+<body>
+    <ol>
+        
+        @foreach (var band in Model)
+        {
+            <li>
+                @band.Name;
+                @band.Description;
+            </li>  
+        }
+    </ol>
+    
+
+</body>
+</html>
+
+
