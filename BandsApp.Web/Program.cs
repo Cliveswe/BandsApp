@@ -4,6 +4,7 @@ namespace BandsApp.Web
     {
         public static void Main(string[] args)
         {
+            // test
             var builder = WebApplication.CreateBuilder(args);
             var app = builder.Build();
 
