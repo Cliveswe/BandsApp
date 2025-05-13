@@ -42,7 +42,7 @@ public class BandService
         .SingleOrDefault(b => b.Id == id);
 
 
-    public Band[] GetAll() {
+    public Band[] GetAllBands() {
         return bands
             .OrderBy(x => x.Name)
             .ToArray();
