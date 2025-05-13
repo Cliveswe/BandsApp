@@ -2,11 +2,14 @@
  <!DOCTYPE html>
     <html>
     <head>
+    <link type="text/css" rel="stylesheet" href="https://unpkg.com/@@picocss/pico@@latest/css/pico.classless.min.css" />
         <title>Details</title>
     </head>
     <body>
-    @Model.Name
-    @Model.Description
-    @Model.Id
+    Name: @Model.Name <br />
+    Description: @Model.Description
+    <br />
+    Band ID: @Model.Id
+    <br />
     </body>
     </html>
