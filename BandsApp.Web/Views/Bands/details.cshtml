@@ -7,12 +7,11 @@
     </head>
     <body>
     Name: @Model.Name <br />
-    <img src="@Model.GetAlbumCover()" class="img" alt="Band Image" style="width: 200px; height: 200px;" />
+    <!--This resolves the path server-side and is good for dynamic environments:-->
+    <img src="@Url.Content(@Model.GetAlbumCover())" class="img" alt="Band Image" style="width: 200px; height: 200px;" />
     Description: @Model.Description
     <br />
     
-
-    <img src="~/Images/miserybusiness.jpg" class="img" alt="Band Image" style="width: 200px; height: 200px;" />
     <br />
     </body>
     </html>
