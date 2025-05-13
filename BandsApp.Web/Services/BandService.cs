@@ -5,9 +5,34 @@ namespace BandsApp.Web.Services;
 public class BandService
 {
     private List<Band> bands = [
-        new Band(1, "Misery Business", "rock music"),
-        new Band(2, "E-Type", "swedish"),
-        new Band(3, "Slipknot", "metal"),
+        new Band
+        (
+            1, "Paramore", "rock music",
+            [
+                "Riot",
+                "Misery Business",
+                "Sunday Bloody Sunday"
+            ]
+            
+        ),
+        new Band
+        (
+            2, "E-Type", "swedish",
+            [
+                "Last man standing",
+                "Euro IV Fever",
+                "Eurotipia"
+            ]
+        ),
+        new Band
+        (
+            3, "Slipknot", "metal", 
+            [
+                "Dhrenas",
+                "Bella Lugxsi",
+                "Iowa"
+            ]
+        ),
     ];
 
     public Band? GetById(int id)
