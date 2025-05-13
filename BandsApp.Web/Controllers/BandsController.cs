@@ -16,8 +16,8 @@ namespace BandsApp.Web.Controllers
 
         [Route("/details/{id}")]
         public IActionResult Details(int id) {
-
-            return Content($"Band {id}");
+            var res = bandService.GetById(id);
+            return View(res);
             }
 
 

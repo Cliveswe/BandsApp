@@ -14,8 +14,11 @@
         @foreach (var band in Model)
         {
             <li>
-                @band.Name -
-                @band.Description
+                <a href="@Url.Action("Details", "Bands", new { id = band.Id })">
+                    @band.Name
+                    - @band.Description
+                </a>
+
             </li>  
         }
     </ol>
