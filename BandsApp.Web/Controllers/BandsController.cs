@@ -1,24 +1,28 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using BandsApp.Web.Models;
 using BandsApp.Web.Services;
-using BandsApp.Web.Models;
+using Microsoft.AspNetCore.Mvc;
 
 namespace BandsApp.Web.Controllers
-{
-    public class BandsController : Controller
     {
+    public class BandsController : Controller
+        {
         BandService bandService = new();
         [Route("")]
-        public IActionResult Index()
-        {
+        public IActionResult Index() {
             Band[] model = bandService.GetAll();
             return View(model);
+            }
+
+
+        [Route("/details/{id}")]
+        public IActionResult Details(int id) {
+
+            return Content($"Band {id}");
+            }
+
+
+
+
+
         }
-
-        
-
-
-
-
-
     }
-}
