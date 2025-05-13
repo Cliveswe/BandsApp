@@ -3,7 +3,7 @@
 namespace BandsApp.Web.Services;
 
 public class BandService
-{
+    {
     private List<Band> bands = [
         new Band
         (
@@ -12,8 +12,8 @@ public class BandService
                 "Riot",
                 "Misery Business",
                 "Sunday Bloody Sunday"
-            ]
-            
+            ],
+            "https://www.youtube.com/embed/aCyGvGEtOwc?si=brIF9hEsGHnB-FR1"
         ),
         new Band
         (
@@ -22,16 +22,18 @@ public class BandService
                 "Last man standing",
                 "Euro IV Fever",
                 "Eurotipia"
-            ]
+            ],
+            "https://www.youtube.com/embed/y-y3Ef6aTPY?si=dw6qAuPcAGs2RdRm"
         ),
         new Band
         (
-            3, "Slipknot", "metal", 
+            3, "Slipknot", "metal",
             [
                 "Dhrenas",
                 "Bella Lugxsi",
                 "Iowa"
-            ]
+            ],
+            "https://www.youtube.com/embed/5abamRO41fE?si=0Z4xTxJPtRKDWhNd"
         ),
     ];
 
@@ -40,10 +42,9 @@ public class BandService
         .SingleOrDefault(b => b.Id == id);
 
 
-    public Band[] GetAll()
-    {
+    public Band[] GetAll() {
         return bands
             .OrderBy(x => x.Name)
             .ToArray();
+        }
     }
-}
